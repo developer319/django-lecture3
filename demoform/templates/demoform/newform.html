@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django forms </title>
+</head>
+<body>
+    {{ form.non_field_errors }}
+<div class="fieldWrapper">
+    {{ form.name.errors }}
+    <label for="{{ form.name.id_for_label }}">Name:</label>
+    {{ form.name }}
+</div>
+<div class="fieldWrapper">
+    {{ form.last.errors }}
+    <label for="{{ form.last.id_for_label }}">Last Name:</label>
+    {{ form.last }}
+</div>
+<div class="fieldWrapper">
+    {{ form.dob.errors }}
+    <label for="{{ form.dob.id_for_label }}">DOB:</label>
+    {{ form.dob }}
+</div>
+<div class="fieldWrapper">
+    {{ form.oganization.errors }}
+    <label for="{{ form.organization.id_for_label }}">Organization</label>
+    {{ form.organzation }}
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator</title>
+</head>
+
+<body>
+    <div style="display: flex; flex-direction: column;">
+       <div> <a
+        href="https://learning.edx.org/course/course-v1:HarvardX+CS50+X/block-v1:HarvardX+CS50+X+type@sequential+block@6ea5a2ca5fdf422b8c6b4c993fe75083/block-v1:HarvardX+CS50+X+type@vertical+block@ca72c7c0d4d449e69a5b8d23f0f6cb0b">Computer Science Program</a></div>
+ 
+      <div><a href="https://www.youtube.com/watch?v=5BDgKJFZMl8&list=PLu0W_9lII9ah7DDtYtflgwMwpT3xmjXY9">Django Course</a></div>  
+  <div><a href="https://docs.oracle.com/javase/8/docs/api/index.html?java/util/regex/package-summary.html">Java Docs</a></div>     
+
+    </div>
+
+    <ul>
+        {% for items in disp %}
+        <li>{{ items }}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for keys,values in dic.items %}
+        <li>{{keys}} {{values}}</li>
+        {% endfor %}
+    </ul>
+
+    <div>
+        <form action="analyze" method="get">
+            <textarea name="text" style="margin: 0px;width: 721px;height: 93px;"></textarea><br><br>
+
+            <input type="checkbox" name="removepunc">Remove punchuation<br>
+            <br>
+            <br>
+            <input type="checkbox" name="capitalize">Capitalize<br>
+            <br>
+            <br>
+            <input type="checkbox" name="newlineremover">Remove New Line<br>
+            <br>
+            <br>
+            <input type="checkbox" name="extraspaceremover">Extra Space Remover<br>
+            <br>
+            <br>
+            <button type="submit">Analyze Text</button>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
